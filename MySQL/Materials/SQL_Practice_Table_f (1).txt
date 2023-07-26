@@ -1,0 +1,60 @@
+#Create Table Worker
+create table Worker(
+Worker_ID int(3),
+First_Name varchar(10),
+Last_Name varchar(10),
+Salary int(10),
+Joining_Date DATETIME,
+Department varchar(8)
+);
+
+select * from Worker;
+
+#Insert Value to Worker Table
+insert into Worker(Worker_ID,First_Name,Last_Name,Salary,Joining_Date,Department)values
+(001,"Monika","Arora",100000,"2014-02-20 09:00:00","HR"),
+(002,"Niharika","Verma",80000,"2014-06-11 09:00:00","Admin"),
+(003,"Vishal","Singhal",300000,"2014-02-20 09:00:00","HR"),
+(004,"Amitabh","Singh",500000,"2014-02-20 09:00:00","Admin"),
+(005,"Vivek","Bhati",500000,"2014-06-11 09:00:00","Admin"),
+(006,"Vipul","Diwan",200000,"2014-06-11 09:00:00","Account"),
+(007,"Satish","Kumar",75000,"2014-01-20 09:00:00","Account"),
+(008,"Geetika","Chauhan",9000,"2014-04-11 09:00:00","Admin");
+drop table Worker;
+
+select * from worker;
+turncate table from worker;
+drop table worker;
+#create Bonus table
+create table Bonus(
+Worker_REF_ID int(1),
+Bonus_Date DATETIME,
+Bonus_Amount int(4)
+);
+select * from Bonus;
+insert into Bonus(Worker_REF_ID,Bonus_Date,Bonus_Amount)values
+(1,"2016-02-20 00:00:00",5000),
+(2, "2016-06-11 00:00:00",3000),
+(3, "2016-02-20 00:00:00",4000),
+(1,"2016-02-20 00:00:00",4500),
+(2,"2016-06-11 00:00:00",3500);
+select * from bonus;
+
+# Create table Title
+create table Title(
+Worker_REF_ID int(1),
+Worker_Title Varchar(15),
+Affected_From DATETIME
+);
+select * from Title;
+
+insert into Title(Worker_REF_ID,Worker_Title,Affected_From)values
+(1,"Manager","2016-02-20 00:00:00"),
+(2, "Executive","2016-06-11 00:00:00"),
+(8,"Executive","2016-06-11 00:00:00"),
+(5,"Manager","2016-06-11 00:00:00"),
+(4,"Asst.Manager","2016-06-11 00:00:00"),
+(7,"Executive","2016-06-11 00:00:00"),
+(6, "Lead","2016-06-11 00:00:00"),
+(3, "Lead","2016-06-11 00:00:00");
+select * from Title;
